@@ -9,7 +9,7 @@ function resolveObject(object, el) {
             var ObjectTitleDOM = document.createElement("div");
 
             DIV_CONTAINER.setAttribute("class", "object");
-            ObjectTitleDOM.innerHTML = "<p id='object-title'>" + element + `<a class="object-button" id="${ObjectType}">${ObjectType}</a>` + "</p>";
+            ObjectTitleDOM.innerHTML = "<p id='object-title'>" + element + `<a class="object-button"><i class="uil uil-plus"></i></a><span>` + ObjectType + "</span></p>";
 
             DIV_CONTAINER.append(ObjectTitleDOM);
 
@@ -29,10 +29,11 @@ function resolveObject(object, el) {
     document.querySelectorAll(".object-button").forEach((btn) => {
         var ObjectValue = btn.parentNode.parentNode.parentNode.querySelector(".object-value");
 
-        btn.addEventListener("click", function () {
+        btn.onclick = () => {
             if (ObjectValue.classList.contains("active")) return ObjectValue.classList.remove("active");
+
             ObjectValue.classList.add("active");
-        });
+        };
     });
 }
 
@@ -41,9 +42,13 @@ function preview() {
     var JSON_PREVIEW = document.querySelector(".json-preview");
 
     JSON_PREVIEW.innerHTML = "";
+
+
     
-	resolveObject(
-        JSON.parse(document.querySelector("textarea").value), 
-        JSON_PREVIEW
-    );
+        resolveObject(
+            JSON.parse(document.querySelector("textarea").value), 
+            JSON_PREVIEW
+        );
+    
+	
 }
