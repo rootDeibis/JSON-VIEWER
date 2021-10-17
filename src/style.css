@@ -40,17 +40,28 @@ p#object-title a {
     color: black;
 }
 
+p.object-key {
+    margin: 5px 0;
+}
+p.object-key b {
+    margin-right: 12px;
+}
+
+
 .object-value {
 	display: none;
+    margin-left: 10px;
+    border-left: solid 2px;
+    padding: 10px 0;
+    padding-left: 8px;
+    border-radius: 0px;
+    border-color: #2196f3;
 }
 
 .object-value.active {
 	display: block;
 }
 
-p b {
-	margin-right: 12px;
-}
 
 textarea {
 	resize: none;
