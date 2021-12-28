@@ -1,38 +1,44 @@
+<!--
+    
+    Created by github.com/rootDeibis
+
+-->
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JSON VISUALIZER</title>
-        <link rel="stylesheet" href="./style.css">
-        
-    </head>
-    <body>
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
 
 
-    	<div id="app" class="row vh-100">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    
+    
+    
+    
 
-    		<div class="col">
+</head>
 
-    			<div class="form-floating">
-  					<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-  					<label for="floatingTextarea">JSON Code</label>
-				</div>
+<body>
+	<p id="problem"></p>
+	<div id="app">
 
-				<button onclick="preview()" class="btn btn-primary w-100 rounded-pill shadow mt-4">Preview</button>
-    			
-    		</div>
+		<div class="oplugins-json-textearea">
+			<textarea></textarea>
+		
+		</div>
+		<div class="oplugins-json-display">
+			<h4>Object Parsed</h4>
+		</div>
+		<button>Parse JSON <i class="uil uil-arrow-right"></i></button>
+	</div>
 
-    		<div class="col json-preview shadow">
-    			<h4>Preview</h4>
-    		</div>
-    		
-    	</div>
+	
 
-
-        
-        <script src="./app.js"></script>
-    </body>
+	<script type="text/javascript" src="./assets/js/script.js" ></script>
+	
+</body>
 </html>
